@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+    <!-- cargamos las dos librerías que necesitamos-->
+    <style type="text/css">
+    		#container {
+			min-width: 310px;
+			max-width: 1025px;
+			height: 400px;
+			margin: 0 auto
+			}
+    </style>
+</head>
+<body>
+
+ <div id="container" style="min-width: 310px; height: 550px; margin: 0 auto"></div>
+
+<script src="lib/highcharts.js"></script>
+<script src="libexporting.js"></script>
+<script>
+Highcharts.chart('container', {
+    title: {
+        text: 'Precio del crédito de grados universitarios en Cataluña'
+    },
+
+    subtitle: {
+        text: 'Source: Precio de los créditos de grado de Filología Hispánica, Ingeniería de Telecomunicaciones, Medicina y Periodismo'
+    },
+
+    yAxis: {
+        title: {
+            text: 'Precio del crédito en euros'
+        }
+    },
+    legend: {
+        layout: 'vertical',
+        align: 'right',
+        verticalAlign: 'middle'
+    },
+
+    plotOptions: {
+        series: {
+            pointStart: 2010
+        }
+    },
+    series: [{
+        name: 'Filología hispánica',
+        data: [12.4, 16.16, 25.27, 25.27, 25.27, 25.27, 18.95]
+    }, {
+        name: 'Ingeniería de Telecominicaciones',
+        data: [null, 21.46, 35.77, 39.53, 39.53, 39.53, 29.65]
+    }, {
+        name: 'Medicina',
+        data: [22.04, 23.72, 39.53, 39.53, 39.53, 39.53, 29.65]
+    }, {
+        name: 'Periodismo',
+        data: [19.94, 21.46, 35.77, 35.77, 35.77, 35.77, 26.83]
+    }]
+});
+</script>
+
+
+</body>
+</html>
